@@ -4,7 +4,7 @@
 #define SIZE 5
 int front = -1;
 int rear = -1;
-int stack[SIZE];
+int queue[SIZE];
 bool isEmpty(){
     return (front == -1 && rear == -1);
 }
@@ -22,30 +22,30 @@ void enqueue(int data){
     else{
         rear++;
     }
-    stack[rear]=data;    
+    queue[rear]=data;    
 }
 
 int dequeue(){
     int dequeued=0;
    if(isEmpty()){
-    printf("The stack is empty, you cant pop \n");
+    printf("The queue is empty, you cant pop \n");
     return -1;
    }
    else if(front==rear){
-    dequeued=stack[front];
+    dequeued=queue[front];
     return front;
    }
    else {
-    dequeued=stack[front];
+    dequeued=queue[front];
     front++;
     return front;
    }
 }
 
 void display(){
-    printf("The stack is \n");
+    printf("The queue is \n");
     for(int i=0;i<SIZE;i++){
-        printf("%d \t",stack[i]);
+        printf("%d \t",queue[i]);
     }
     printf("\n");
     for(int i=0;i<2;i++){
