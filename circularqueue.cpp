@@ -53,7 +53,7 @@ class CircularQueue{
             if(popped==-1){
             	break;
 			}
-			cout<<"You dequeued: "<<popped<<endl;
+			cout<<"You dequeued this: "<<popped<<endl;
             cout<<"Press 'Yes' to continue dequeing"<<endl;
             cin>>yesorno;
         }
